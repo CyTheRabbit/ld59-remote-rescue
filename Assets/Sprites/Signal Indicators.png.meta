@@ -1,0 +1,626 @@
+fileFormatVersion: 2
+guid: 5e512c0fdbcdc4722a67ab528a5c2a1c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7712460710328477590
+    second: Signal Indicators_0
+  - first:
+      213: -3408273270840811221
+    second: Signal Indicators_1
+  - first:
+      213: 6187484416296505770
+    second: Signal Indicators_2
+  - first:
+      213: 6862078771619338656
+    second: Signal Indicators_3
+  - first:
+      213: -3965336344449150156
+    second: Signal Indicators_4
+  - first:
+      213: -9184977228444134754
+    second: Signal Indicators_5
+  - first:
+      213: -8937083631798225513
+    second: Signal Indicators_6
+  - first:
+      213: -6352473961069912108
+    second: Signal Indicators_7
+  - first:
+      213: 6467136031062625996
+    second: Signal Indicators_8
+  - first:
+      213: -4131886601095980823
+    second: Signal Indicators_9
+  - first:
+      213: 4276918883810339265
+    second: Signal Indicators_10
+  - first:
+      213: -3662207043541031286
+    second: Signal Indicators_11
+  - first:
+      213: -6855962683449600252
+    second: Signal Indicators_12
+  - first:
+      213: -1758040970427259388
+    second: Signal Indicators_13
+  - first:
+      213: 4048635767391166904
+    second: Signal Indicators_14
+  - first:
+      213: -1793356832059194545
+    second: Signal Indicators_15
+  - first:
+      213: -2571277223001959473
+    second: Signal Indicators_16
+  - first:
+      213: 117057525656525187
+    second: Signal Indicators_17
+  - first:
+      213: -6288489744590865300
+    second: Signal Indicators_18
+  - first:
+      213: 8362546701831346451
+    second: Signal Indicators_19
+  - first:
+      213: 2106827664047532356
+    second: Signal Indicators_20
+  - first:
+      213: 1235421540209575468
+    second: Signal Indicators_21
+  - first:
+      213: -4303415526601776676
+    second: Signal Indicators_22
+  - first:
+      213: -9057401631059888192
+    second: Signal Indicators_23
+  - first:
+      213: 8467520986431150626
+    second: Signal Indicators_24
+  - first:
+      213: -9125301966244962028
+    second: Signal Indicators_25
+  - first:
+      213: -2351792074476954321
+    second: Signal Indicators_26
+  - first:
+      213: 1149867189585841747
+    second: Signal Indicators_27
+  - first:
+      213: -1061538386485203895
+    second: Signal Indicators_28
+  - first:
+      213: 1473907953343442447
+    second: Signal Indicators_29
+  - first:
+      213: 7837794588898690912
+    second: Signal Indicators_30
+  - first:
+      213: 2312136606671586688
+    second: Signal Indicators_31
+  - first:
+      213: 2029978145075988679
+    second: Signal Indicators_32
+  - first:
+      213: 3685796460482420984
+    second: Signal Indicators_33
+  - first:
+      213: 4024594790770632025
+    second: Signal Indicators_34
+  - first:
+      213: -8316682793161484890
+    second: Signal Indicators_35
+  - first:
+      213: -3688235161960891279
+    second: Signal Indicators_36
+  - first:
+      213: -5255992417462466137
+    second: Signal Indicators_37
+  - first:
+      213: 1118154830380329177
+    second: Signal Indicators_38
+  - first:
+      213: 5368011275327409670
+    second: Signal Indicators_39
+  - first:
+      213: -8901835307732889388
+    second: Signal Indicators_40
+  - first:
+      213: -3848168908195201409
+    second: Signal Indicators_41
+  - first:
+      213: -7979788251473866276
+    second: Signal Indicators_42
+  - first:
+      213: -2393270281072523612
+    second: Signal Indicators_43
+  - first:
+      213: 6119194231680165549
+    second: Signal Indicators_44
+  - first:
+      213: -8963968848111725867
+    second: Signal Indicators_45
+  - first:
+      213: 8461740643704890764
+    second: Signal Indicators_46
+  - first:
+      213: 5344308730658038971
+    second: Signal Indicators_47
+  - first:
+      213: 227582697785875374
+    second: Signal Indicators_48
+  - first:
+      213: 5668026820570777641
+    second: Signal Indicators_49
+  - first:
+      213: 8162888816553293021
+    second: Signal Indicators_50
+  - first:
+      213: 5570808001846036463
+    second: Signal Indicators_51
+  - first:
+      213: 5787283286757151269
+    second: Signal Indicators_52
+  - first:
+      213: 2348229078032383
+    second: Signal Indicators_53
+  - first:
+      213: 6648793478361373139
+    second: Signal Indicators_54
+  - first:
+      213: 8198296062293407258
+    second: Signal Indicators_55
+  - first:
+      213: -4843258825597737452
+    second: Signal Indicators_56
+  - first:
+      213: 1130754942929849511
+    second: Signal Indicators_57
+  - first:
+      213: -5279428640104435952
+    second: Signal Indicators_58
+  - first:
+      213: 7404240989762024280
+    second: Signal Indicators_59
+  - first:
+      213: -3513729356387556002
+    second: Signal Indicators_60
+  - first:
+      213: 5946245062989360691
+    second: Signal Indicators_61
+  - first:
+      213: -4911475902108480375
+    second: Signal Indicators_62
+  - first:
+      213: -4849263823501337078
+    second: Signal Indicators_63
+  - first:
+      213: 6301051400373099463
+    second: Signal Indicators_64
+  - first:
+      213: -8257650234994579121
+    second: Signal Indicators_65
+  - first:
+      213: 8827945291750549027
+    second: Signal Indicators_66
+  - first:
+      213: 8485505751147730303
+    second: Signal Indicators_67
+  - first:
+      213: -8789875081215874124
+    second: Signal Indicators_68
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 160
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Signal Indicators_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 704
+        width: 256
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a68d6b8a8d5d7f490800000000000000
+      internalID: -7712460710328477590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Signal Indicators_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 256
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b21231a948163b0d0800000000000000
+      internalID: -3408273270840811221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Signal Indicators_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 576
+        width: 256
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa15e9e3b4c5ed550800000000000000
+      internalID: 6187484416296505770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Signal Indicators_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 256
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a99e1339400b3f50800000000000000
+      internalID: 6862078771619338656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Signal Indicators_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 448
+        width: 256
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 433992e9a9b48f8c0800000000000000
+      internalID: -3965336344449150156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Signal Indicators_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 256
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e921984ffd7688080800000000000000
+      internalID: -9184977228444134754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Signal Indicators_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 256
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79575be99c919f380800000000000000
+      internalID: -8937083631798225513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Signal Indicators_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 256
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4df5289d69a77d7a0800000000000000
+      internalID: -6352473961069912108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Signal Indicators_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 256
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cce0e95b4f1efb950800000000000000
+      internalID: 6467136031062625996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Signal Indicators_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 256
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e85a79270798a6c0800000000000000
+      internalID: -4131886601095980823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Signal Indicators_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 256
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c9eca2901baa5b30800000000000000
+      internalID: 4276918883810339265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Signal Indicators_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a86adcbd81a3d2dc0800000000000000
+      internalID: -3662207043541031286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: aeb28286c97c648919e4ed7a4869c034
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Signal Indicators_0: -7712460710328477590
+      Signal Indicators_1: -3408273270840811221
+      Signal Indicators_10: 4276918883810339265
+      Signal Indicators_11: -3662207043541031286
+      Signal Indicators_2: 6187484416296505770
+      Signal Indicators_3: 6862078771619338656
+      Signal Indicators_4: -3965336344449150156
+      Signal Indicators_5: -9184977228444134754
+      Signal Indicators_6: -8937083631798225513
+      Signal Indicators_7: -6352473961069912108
+      Signal Indicators_8: 6467136031062625996
+      Signal Indicators_9: -4131886601095980823
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
