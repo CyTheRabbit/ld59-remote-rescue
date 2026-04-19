@@ -22,15 +22,14 @@ namespace Lag
         private float lastShotTime;
         private Vector2 velocity;
 
-        public void Update()
+        public void FixedUpdate()
         {
             velocity = Vector2.MoveTowards(
                 velocity,
                 Signal.Move ? Signal.Direction * Speed : Vector2.zero,
                 Acceleration * Time.deltaTime);
 
-            // transform.position += (Vector3)(velocity * Time.deltaTime);
-            Rigidbody.position += velocity * Time.deltaTime;
+            Rigidbody.MovePosition(Rigidbody.position + velocity * Time.deltaTime);
 
             if ((Signal.Fire || fireBuffered) && Time.time > lastShotTime + ShootCooldown)
             {

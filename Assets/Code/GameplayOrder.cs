@@ -16,7 +16,14 @@ namespace Code
         public RadioIndicator RadioIndicator;
         public Volume PoorConnectionVolume;
 
-        public void Update()
+        private SignalSource[] signalSources;
+
+        public void Start()
+        {
+            signalSources = FindObjectsByType<SignalSource>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+        }
+
+        public void FixedUpdate()
         {
             var signalStrength = GetSignalStrength();
             var lag = signalStrength >= LagGradation.Length ? LagGradation[^1] : LagGradation[signalStrength];
@@ -29,13 +36,19 @@ namespace Code
                 Bot.Receive(signal);
             }
             PoorConnectionVolume.weight = Mathf.InverseLerp(4, 12, signalStrength);
-            Application.targetFrameRate = Math.Clamp(60 - signalStrength * 5, 5, 60);
+            Application.targetFrameRate = (60 / Math.Max(1, signalStrength));
         }
 
         private int GetSignalStrength()
         {
-            var distance = Bot.transform.position.magnitude;
-            return Mathf.FloorToInt(distance / 5);
+            var botPosition = Bot.transform.position;
+            var strength = 12;
+            foreach (var source in signalSources)
+            {
+                if (!source.isActiveAndEnabled) { continue; }
+                strength = Mathf.Min(strength, source.GetSignalStrengthAtPosition(botPosition));
+            }
+            return strength;
         }
     }
 }

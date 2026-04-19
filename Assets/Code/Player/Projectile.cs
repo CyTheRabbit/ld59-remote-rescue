@@ -7,10 +7,17 @@ namespace Lag
         public Vector2 Direction;
         public float Speed;
         public float Lifetime;
+        public LayerMask LayerMask;
 
-        public void Update()
+        public void FixedUpdate()
         {
-            transform.position += (Vector3)(Speed * Time.deltaTime * Direction);
+            if (Physics2D.Raycast(transform.position, Direction, Time.deltaTime * Speed, LayerMask))
+            {
+                Lifetime = 0;
+            }
+
+            var travel = Speed * Time.deltaTime * Direction;
+            transform.position += (Vector3)travel;
             Lifetime -= Time.deltaTime;
             if (Lifetime <= 0)
             {
