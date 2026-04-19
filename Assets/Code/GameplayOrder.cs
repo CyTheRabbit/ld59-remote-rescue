@@ -1,3 +1,5 @@
+using System;
+using Enemies;
 using Lag;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -18,17 +20,20 @@ namespace Code
         public Volume PoorConnectionVolume;
 
         private SignalSource[] signalSources;
+        private Jammer[] jammers;
+        private int signalStrength;
         private int framesSinceLastRedraw;
 
         public void Start()
         {
             signalSources = FindObjectsByType<SignalSource>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+            jammers = FindObjectsByType<Jammer>(FindObjectsInactive.Include, FindObjectsSortMode.None);
             Application.targetFrameRate = 60;
         }
 
         public void Update()
         {
-            var signalStrength = GetSignalStrength();
+            signalStrength = GetSignalStrength();
             var lag = signalStrength >= LagGradation.Length ? LagGradation[^1] : LagGradation[signalStrength];
             SignalStrengthIndicator.SetSignalStrength(signalStrength);
 
@@ -40,7 +45,11 @@ namespace Code
                 Bot.SetInput(signal);
             }
             PoorConnectionVolume.weight = Mathf.InverseLerp(4, 12, signalStrength);
+            MusicMixer.SetSignalStrength(signalStrength);
+        }
 
+        public void LateUpdate()
+        {
             var framesToRedraw = signalStrength;
             framesSinceLastRedraw++;
             if (framesSinceLastRedraw > framesToRedraw)
@@ -48,19 +57,24 @@ namespace Code
                 LaggyCamera.Render();
                 framesSinceLastRedraw = 0;
             }
-            MusicMixer.SetSignalStrength(signalStrength);
         }
 
         private int GetSignalStrength()
         {
             var botPosition = Bot.transform.position;
-            var strength = 12;
+            var signal = 12;
             foreach (var source in signalSources)
             {
                 if (!source.isActiveAndEnabled) { continue; }
-                strength = Mathf.Min(strength, source.GetSignalStrengthAtPosition(botPosition));
+                signal = Mathf.Min(signal, source.GetSignalStrengthAtPosition(botPosition));
             }
-            return strength;
+            var jam = 0;
+            foreach (var jammer in jammers)
+            {
+                if (!jammer.isActiveAndEnabled) { continue; }
+                jam = Math.Max(jam, jammer.GetJamStrengthAtPosition(botPosition));
+            }
+            return Math.Max(signal, jam);
         }
     }
 }
