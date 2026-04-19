@@ -10,13 +10,13 @@ namespace Lag
         [SerializeField] private Color downColor;
         [SerializeField] private Image[] bars;
 
-        public void DisplaySignals(LaggyInput input, Bot bot, float lag)
+        public void DisplaySignals(LaggyInput input, float lag)
         {
             if (lag <= 0) { lag = 0.01f; }
             var barStrengths = new NativeArray<float>(bars.Length, Allocator.Temp);
             var now = Time.time;
 
-            if (bot.Signal is not { Move: false, Fire: false })
+            if (input.LaggySignal is not { Move: false, Fire: false })
             {
                 var nextTime = input.SignalQueue.Count > 0 ? input.SignalQueue[0].Time : now;
                 FillInterval(
