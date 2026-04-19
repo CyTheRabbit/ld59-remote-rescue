@@ -1,16 +1,15 @@
 using System;
 using Enemies;
-using Lag;
 using UnityEngine;
 using UnityEngine.Rendering;
 
-namespace Code
+namespace Lag
 {
     public class GameplayOrder : MonoBehaviour
     {
         private readonly LaggyInput laggyInput = new();
 
-        public float[] LagGradation;
+        public GameSettings GameSettings;
 
         public Camera LaggyCamera;
         public MusicMixer MusicMixer;
@@ -34,25 +33,29 @@ namespace Code
         public void Update()
         {
             signalStrength = GetSignalStrength();
-            var lag = signalStrength >= LagGradation.Length ? LagGradation[^1] : LagGradation[signalStrength];
+            var effects = GameSettings.GetSignalEffects(signalStrength);
+            var lag = effects.Lag;
             SignalStrengthIndicator.SetSignalStrength(signalStrength);
 
             laggyInput.ScanFrameInputs();
             PlayerHud.SetHealth(Bot.Health, Bot.MaxHealth);
-            PlayerHud.DisplaySignals(laggyInput, lag, signalStrength);
+            PlayerHud.DisplaySignals(laggyInput, lag);
+            PlayerHud.SetLowSignalWarning(effects.LowSignalWarning);
             while (laggyInput.ReceiveNextSignal(lag) is { } signal)
             {
                 Bot.SetInput(signal);
             }
-            PoorConnectionVolume.weight = Mathf.InverseLerp(4, 12, signalStrength);
-            MusicMixer.SetSignalStrength(signalStrength);
+            PoorConnectionVolume.weight = effects.PostProcessing;
+            MusicMixer.MusicPitch = effects.MusicPitch;
+            MusicMixer.NoiseVolume = effects.NoiseVolume;
         }
 
         public void LateUpdate()
         {
-            var framesToRedraw = signalStrength;
+            var effects = GameSettings.GetSignalEffects(signalStrength);
+
             framesSinceLastRedraw++;
-            if (framesSinceLastRedraw > framesToRedraw)
+            if (framesSinceLastRedraw > effects.FrameLoss)
             {
                 LaggyCamera.Render();
                 framesSinceLastRedraw = 0;
