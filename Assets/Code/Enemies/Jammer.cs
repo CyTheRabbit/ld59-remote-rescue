@@ -11,10 +11,16 @@ namespace Enemies
         public int JamStrength;
 
         private float panicTime;
+        private GameObject player;
 
+        public new void Start()
+        {
+            base.Start();
+            player = GameObject.FindGameObjectWithTag("Player");
+        }
+        
         public new void FixedUpdate()
         {
-            var player = GameObject.FindGameObjectWithTag("Player");
             if (panicTime > 0)
             {
                 var panicDirection = PickPanicDirection(player.transform.position);

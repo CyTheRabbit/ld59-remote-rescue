@@ -20,6 +20,7 @@ namespace Lag
         public float WallsStagger;
         public float DamageKnockback;
         public float DamageStagger;
+        public float DamageInvincibility;
         public Animator Animator;
         public Rigidbody2D Rigidbody;
         public Collider2D Collider;
@@ -29,6 +30,7 @@ namespace Lag
         private bool fireBuffered;
         private float fireTime;
         private float staggerTime;
+        private float invincibilityTime;
         private Vector2 velocity;
 
         [NonSerialized] public int Health;
@@ -54,6 +56,7 @@ namespace Lag
         {
             staggerTime -= Time.deltaTime;
             fireTime -= Time.deltaTime;
+            invincibilityTime -= Time.deltaTime;
 
             velocity = Vector2.MoveTowards(
                 velocity,
@@ -108,8 +111,10 @@ namespace Lag
 
         public virtual void Damage(Vector2 direction)
         {
+            if (invincibilityTime > 0) { return; }
             velocity = DamageKnockback * direction;
             staggerTime = DamageStagger;
+            invincibilityTime = DamageInvincibility;
             Health--;
             if (Health <= 0)
             {

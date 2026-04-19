@@ -511,6 +511,7 @@ MonoBehaviour:
   WallsStagger: 0
   DamageKnockback: 10
   DamageStagger: 0.2
+  DamageInvincibility: 0.5
   Animator: {fileID: 2918641052676179919}
   Rigidbody: {fileID: 5915553161975947470}
   Collider: {fileID: 7624743649934301935}

@@ -5,9 +5,16 @@ namespace Enemies
 {
     public class Bat : PawnBase
     {
+        private GameObject player;
+
+        public new void Start()
+        {
+            base.Start();
+            player = GameObject.FindGameObjectWithTag("Player");
+        }
+        
         public new void FixedUpdate()
         {
-            var player = GameObject.FindGameObjectWithTag("Player");
             var diff = player.transform.position - transform.position;
             var direction = new Vector2(
                 diff.x switch
