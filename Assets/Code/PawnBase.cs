@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Lag
@@ -30,11 +31,11 @@ namespace Lag
         private float staggerTime;
         private Vector2 velocity;
 
-        private int health;
+        [NonSerialized] public int Health;
 
         public void Start()
         {
-            health = MaxHealth;
+            Health = MaxHealth;
         }
 
         private void OnEnable()
@@ -75,7 +76,8 @@ namespace Lag
 
         public void OnCollisionEnter2D(Collision2D other)
         {
-            var damages = (other.gameObject.layer & DamageLayers) != 0;
+            var layerMask = 1 << other.gameObject.layer;
+            var damages = (layerMask & DamageLayers) != 0;
             if (damages)
             {
                 Damage(other.contacts[0].normal);
@@ -108,8 +110,8 @@ namespace Lag
         {
             velocity = DamageKnockback * direction;
             staggerTime = DamageStagger;
-            health--;
-            if (health <= 0)
+            Health--;
+            if (Health <= 0)
             {
                 Animator.SetTrigger(PerishHash);
                 enabled = false;

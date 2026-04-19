@@ -1,4 +1,3 @@
-using System;
 using Lag;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -15,7 +14,7 @@ namespace Code
         public MusicMixer MusicMixer;
         public Bot Bot;
         public SignalStrengthIndicator SignalStrengthIndicator;
-        public RadioIndicator RadioIndicator;
+        public PlayerHud PlayerHud;
         public Volume PoorConnectionVolume;
 
         private SignalSource[] signalSources;
@@ -34,7 +33,8 @@ namespace Code
             SignalStrengthIndicator.SetSignalStrength(signalStrength);
 
             laggyInput.ScanFrameInputs();
-            RadioIndicator.DisplaySignals(laggyInput, lag);
+            PlayerHud.SetHealth(Bot.Health, Bot.MaxHealth);
+            PlayerHud.DisplaySignals(laggyInput, lag, signalStrength);
             while (laggyInput.ReceiveNextSignal(lag) is { } signal)
             {
                 Bot.SetInput(signal);

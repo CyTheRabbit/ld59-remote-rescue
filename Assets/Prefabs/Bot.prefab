@@ -502,7 +502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6a5e1dac0dc42cfb03508ab1ff79e47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 50
+  MaxHealth: 10
   Speed: 6
   Acceleration: 40
   FireCooldown: 0.33

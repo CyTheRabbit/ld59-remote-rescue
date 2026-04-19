@@ -4,13 +4,21 @@ using UnityEngine.UI;
 
 namespace Lag
 {
-    public class RadioIndicator : MonoBehaviour
+    public class PlayerHud : MonoBehaviour
     {
         [SerializeField] private Color upColor;
         [SerializeField] private Color downColor;
         [SerializeField] private Image[] bars;
+        [SerializeField] private CanvasGroup lowSignalGroup;
+        [SerializeField] private RectTransform healthSlider;
 
-        public void DisplaySignals(LaggyInput input, float lag)
+        public void SetHealth(int health, int maxHealth)
+        {
+            var ratio = (float)health / maxHealth;
+            healthSlider.anchorMax = new Vector2(ratio, 1);
+        }
+
+        public void DisplaySignals(LaggyInput input, float lag, int signalStrength)
         {
             if (lag <= 0) { lag = 0.01f; }
             var barStrengths = new NativeArray<float>(bars.Length, Allocator.Temp);
@@ -40,6 +48,8 @@ namespace Lag
             {
                 bars[i].color = Color.Lerp(downColor, upColor, barStrengths[i]);
             }
+
+            lowSignalGroup.alpha = signalStrength > 8 ? 1 : 0;
         }
 
         private void FillInterval(float start, float end, NativeArray<float> barStrengths)
