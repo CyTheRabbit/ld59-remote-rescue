@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 744d7b2aee53543dea9f8e81c6ec7080
+guid: b1ea4d8b717bb054eb8e279a5d5b77c0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6195642719986521831
-    second: Rocks Square_0
+      213: -3918253481788734274
+    second: IMG_0922_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,11 +46,11 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 9
-  spritePivot: {x: 0.5, y: 0.1}
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 300
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
@@ -96,53 +96,27 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Rocks Square_0
+      name: IMG_0922_0
       rect:
         serializedVersion: 2
-        x: 23
-        y: 23
-        width: 470
-        height: 458
+        x: 0
+        y: 102
+        width: 512
+        height: 326
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7e618085a385bf550800000000000000
-      internalID: 6195642719986521831
+      spriteID: eb48b06d7319f99c0800000000000000
+      internalID: -3918253481788734274
       vertices: []
       indices: 
       edges: []
@@ -151,8 +125,8 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    spriteID: 
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -161,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Rocks Square_0: 6195642719986521831
+      IMG_0922_0: -3918253481788734274
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
