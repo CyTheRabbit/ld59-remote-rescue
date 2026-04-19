@@ -106,7 +106,7 @@ namespace Lag
         {
         }
 
-        public void Damage(Vector2 direction)
+        public virtual void Damage(Vector2 direction)
         {
             velocity = DamageKnockback * direction;
             staggerTime = DamageStagger;

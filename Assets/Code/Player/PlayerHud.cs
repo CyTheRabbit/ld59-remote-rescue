@@ -18,7 +18,7 @@ namespace Lag
             healthSlider.anchorMax = new Vector2(ratio, 1);
         }
 
-        public void DisplaySignals(LaggyInput input, float lag, int signalStrength)
+        public void DisplaySignals(LaggyInput input, float lag)
         {
             if (lag <= 0) { lag = 0.01f; }
             var barStrengths = new NativeArray<float>(bars.Length, Allocator.Temp);
@@ -48,8 +48,11 @@ namespace Lag
             {
                 bars[i].color = Color.Lerp(downColor, upColor, barStrengths[i]);
             }
+        }
 
-            lowSignalGroup.alpha = signalStrength > 8 ? 1 : 0;
+        public void SetLowSignalWarning(bool visible)
+        {
+            lowSignalGroup.alpha = visible ? 1 : 0;
         }
 
         private void FillInterval(float start, float end, NativeArray<float> barStrengths)

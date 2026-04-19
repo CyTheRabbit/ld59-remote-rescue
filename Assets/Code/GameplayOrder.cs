@@ -1,14 +1,15 @@
-using Lag;
+using System;
+using Enemies;
 using UnityEngine;
 using UnityEngine.Rendering;
 
-namespace Code
+namespace Lag
 {
     public class GameplayOrder : MonoBehaviour
     {
         private readonly LaggyInput laggyInput = new();
 
-        public float[] LagGradation;
+        public GameSettings GameSettings;
 
         public Camera LaggyCamera;
         public MusicMixer MusicMixer;
@@ -18,49 +19,65 @@ namespace Code
         public Volume PoorConnectionVolume;
 
         private SignalSource[] signalSources;
+        private Jammer[] jammers;
+        private int signalStrength;
         private int framesSinceLastRedraw;
 
         public void Start()
         {
             signalSources = FindObjectsByType<SignalSource>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+            jammers = FindObjectsByType<Jammer>(FindObjectsInactive.Include, FindObjectsSortMode.None);
             Application.targetFrameRate = 60;
         }
 
         public void Update()
         {
-            var signalStrength = GetSignalStrength();
-            var lag = signalStrength >= LagGradation.Length ? LagGradation[^1] : LagGradation[signalStrength];
+            signalStrength = GetSignalStrength();
+            var effects = GameSettings.GetSignalEffects(signalStrength);
+            var lag = effects.Lag;
             SignalStrengthIndicator.SetSignalStrength(signalStrength);
 
             laggyInput.ScanFrameInputs();
             PlayerHud.SetHealth(Bot.Health, Bot.MaxHealth);
-            PlayerHud.DisplaySignals(laggyInput, lag, signalStrength);
+            PlayerHud.DisplaySignals(laggyInput, lag);
+            PlayerHud.SetLowSignalWarning(effects.LowSignalWarning);
             while (laggyInput.ReceiveNextSignal(lag) is { } signal)
             {
                 Bot.SetInput(signal);
             }
-            PoorConnectionVolume.weight = Mathf.InverseLerp(4, 12, signalStrength);
+            PoorConnectionVolume.weight = effects.PostProcessing;
+            MusicMixer.MusicPitch = effects.MusicPitch;
+            MusicMixer.NoiseVolume = effects.NoiseVolume;
+        }
 
-            var framesToRedraw = signalStrength;
+        public void LateUpdate()
+        {
+            var effects = GameSettings.GetSignalEffects(signalStrength);
+
             framesSinceLastRedraw++;
-            if (framesSinceLastRedraw > framesToRedraw)
+            if (framesSinceLastRedraw > effects.FrameLoss)
             {
                 LaggyCamera.Render();
                 framesSinceLastRedraw = 0;
             }
-            MusicMixer.SetSignalStrength(signalStrength);
         }
 
         private int GetSignalStrength()
         {
             var botPosition = Bot.transform.position;
-            var strength = 12;
+            var signal = 12;
             foreach (var source in signalSources)
             {
                 if (!source.isActiveAndEnabled) { continue; }
-                strength = Mathf.Min(strength, source.GetSignalStrengthAtPosition(botPosition));
+                signal = Mathf.Min(signal, source.GetSignalStrengthAtPosition(botPosition));
             }
-            return strength;
+            var jam = 0;
+            foreach (var jammer in jammers)
+            {
+                if (!jammer.isActiveAndEnabled) { continue; }
+                jam = Math.Max(jam, jammer.GetJamStrengthAtPosition(botPosition));
+            }
+            return Math.Max(signal, jam);
         }
     }
 }

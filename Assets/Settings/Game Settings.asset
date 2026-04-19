@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5702c04e3f7a44a4a80179734c53f708, type: 3}
+  m_Name: Game Settings
+  m_EditorClassIdentifier: 
+  SignalEffects:
+  - Name: 5G III
+    Lag: 0
+    PostProcessing: 0
+    FrameLoss: 0
+    LowSignalWarning: 0
+    MusicPitch: 1
+    NoiseVolume: 0
+  - Name: 5G .II
+    Lag: 0.05
+    PostProcessing: 0
+    FrameLoss: 0
+    LowSignalWarning: 0
+    MusicPitch: 1
+    NoiseVolume: 0
+  - Name: 5G ..I
+    Lag: 0.1
+    PostProcessing: 0
+    FrameLoss: 0
+    LowSignalWarning: 0
+    MusicPitch: 1
+    NoiseVolume: 0
+  - Name: LTE III
+    Lag: 0.15
+    PostProcessing: 0.25
+    FrameLoss: 2
+    LowSignalWarning: 0
+    MusicPitch: 0.75
+    NoiseVolume: 0.25
+  - Name: LTE .II
+    Lag: 0.175
+    PostProcessing: 0.33
+    FrameLoss: 2
+    LowSignalWarning: 0
+    MusicPitch: 0.75
+    NoiseVolume: 0.33
+  - Name: LTE ..I
+    Lag: 0.2
+    PostProcessing: 0.5
+    FrameLoss: 2
+    LowSignalWarning: 0
+    MusicPitch: 0.75
+    NoiseVolume: 0.5
+  - Name: 3G III
+    Lag: 0.25
+    PostProcessing: 0.66
+    FrameLoss: 4
+    LowSignalWarning: 0
+    MusicPitch: 0.5625
+    NoiseVolume: 0.66
+  - Name: 3G .II
+    Lag: 0.3
+    PostProcessing: 0.75
+    FrameLoss: 4
+    LowSignalWarning: 0
+    MusicPitch: 0.5625
+    NoiseVolume: 0.75
+  - Name: 3G ..I
+    Lag: 0.35
+    PostProcessing: 0.83
+    FrameLoss: 4
+    LowSignalWarning: 0
+    MusicPitch: 0.5625
+    NoiseVolume: 0.83
+  - Name: EDGE III
+    Lag: 0.5
+    PostProcessing: 1
+    FrameLoss: 6
+    LowSignalWarning: 0
+    MusicPitch: 0.421875
+    NoiseVolume: 1
+  - Name: EDGE .II
+    Lag: 0.6
+    PostProcessing: 1
+    FrameLoss: 6
+    LowSignalWarning: 0
+    MusicPitch: 0.421875
+    NoiseVolume: 1
+  - Name: EDGE ..I
+    Lag: 0.7
+    PostProcessing: 1
+    FrameLoss: 7
+    LowSignalWarning: 0
+    MusicPitch: 0.421875
+    NoiseVolume: 1
+  - Name: EDGE ...
+    Lag: 0.3
+    PostProcessing: 1
+    FrameLoss: 10
+    LowSignalWarning: 1
+    MusicPitch: 0.31640625
+    NoiseVolume: 1
